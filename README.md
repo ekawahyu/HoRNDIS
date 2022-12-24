@@ -1,3 +1,15 @@
+**NOTE**: Tested to work with manual installation based on the guide provided in GitHub issue from the orginal project here:
+
+https://github.com/jwise/HoRNDIS/issues/146
+
+I use it on Apple M1 Pro machine, Monterey 12.6.2, and XCode 13.3
+Unfortunately the driver does not work plug-and-play, you need to load/unload kext manually over Terminal:
+
+    sudo kextunload /Library/Extensions/HoRNDIS.kext
+    sudo kextload /Library/Extensions/HoRNDIS.kext
+
+Please make sure you plug in your USB device before loading the kext.
+
 # HoRNDIS(the USB tethering driver for Mac OS X)
 
 **HoRNDIS** (pronounce: *"horrendous"*) is a driver for Mac OS X that allows you to use your Android phone's native [USB tethering](http://en.wikipedia.org/wiki/Tethering) mode to get Internet access.
